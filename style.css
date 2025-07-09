@@ -1,0 +1,88 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #111;
+  color: #ccc;
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding-bottom: 2rem;
+}
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+header, main, footer {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+h1, h2 {
+  color: #eee;
+  margin-bottom: 1rem;
+}
+p {
+  margin-bottom: 1rem;
+}
+button {
+  padding: 0.75rem 1.5rem;
+  background: #b30000;
+  color: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+button:hover {
+  background: #cc0000;
+  transform: scale(1.05);
+}
+.hero {
+  height: 100vh;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.overlay {
+  padding: 2rem;
+}
+.tagline {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+}
+.contact-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.profile-pic {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.5s ease-out forwards;
+}
+.delay {
+  animation-delay: 1s;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
