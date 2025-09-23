@@ -1,14 +1,57 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio - Liminal Lens</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Liminal Lens</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header><h1>Portfolio</h1></header>
-  <main><p>Portfolio content goes here...</p></main>
+  <header class="site-header">
+    <a href="index.html" class="logo">Liminal Lens</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#films">Films</a>
+      <a href="#photos">Photography</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="films" class="portfolio-section fade-in">
+      <h2>Films</h2>
+      <div class="grid">
+        <div class="card">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Film Project"></iframe>
+          <p>Skate culture short documentary</p>
+        </div>
+        <div class="card">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Film Project"></iframe>
+          <p>Theatre cast documentary</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="photos" class="portfolio-section fade-in">
+      <h2>Photography</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="photo1.jpg" alt="Photography sample" />
+          <p>Street photography</p>
+        </div>
+        <div class="card">
+          <img src="photo2.jpg" alt="Photography sample" />
+          <p>Portrait session</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Nate Cody — Liminal Lens</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
