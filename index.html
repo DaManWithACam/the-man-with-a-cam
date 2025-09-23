@@ -1,24 +1,56 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Liminal Lens</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liminal Lens — Nate Cody</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Liminal Lens</h1>
-    <p>Cinematic media captured with a purpose</p>
-  </header>
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: damanwithacam@gmail.com</p>
-    <p>Phone: 918-613-0633</p>
-    <p>Instagram: @damanwithacam</p>
-    <p>YouTube: <a href="https://youtube.com/@themanwithacam-o1d">themanwithacam</a></p>
-    <img src="profile.jpg" alt="Profile photo"/>
-  </section>
+  <div class="hero">
+    <div class="overlay">
+      <h1 class="site-title">Liminal Lens</h1>
+      <p class="tagline">Cinematic media captured with a purpose</p>
+      <div class="cta">
+        <a href="portfolio.html"><button class="btn">View Portfolio</button></a>
+        <a href="#contact"><button class="btn outline">Contact</button></a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <section id="contact" class="contact-section">
+      <img src="profile.jpg" alt="Nate Cody" class="profile-pic" />
+      <div class="contact-info">
+        <h2 class="contact-name">Nate Cody</h2>
+        <p class="role">Liminal Lens — Videographer & Photographer</p>
+        <p>Email: <a href="mailto:damanwithacam@gmail.com">damanwithacam@gmail.com</a></p>
+        <p>Phone: <a href="tel:9186130633">918-613-0633</a></p>
+        <p class="socials">
+          <a href="https://youtube.com/@themanwithacam-o1d?si=ki1NKRRMhfyE5S6H" target="_blank" rel="noopener">YouTube</a>
+          <span> · </span>
+          <a href="https://instagram.com/damanwithacam" target="_blank" rel="noopener">Instagram</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="about fade-in">
+      <h3>About</h3>
+      <p>Short bio or a one-liner about your approach to visual storytelling. Keep it crisp and cinematic — this is the place to let clients know what you do and why you do it.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Nate Cody — Liminal Lens</p>
+  </footer>
+
+  <script>
+    // small niceties: set year and reduce motion if user prefers reduced motion
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('reduce-motion');
+    }
+  </script>
 </body>
 </html>
