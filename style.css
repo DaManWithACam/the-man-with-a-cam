@@ -1,5 +1,5 @@
 /* ============================= */
-/* Liminal Lenz - Clean CSS      */
+/* Liminal Lenz Clean Layout     */
 /* ============================= */
 
 /* RESET */
@@ -9,26 +9,24 @@
   box-sizing: border-box;
 }
 
-/* BODY + BACKGROUND */
+/* BODY BACKGROUND */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: white;
-  min-height: 100vh;
 
-  background-image: url("background.jpg"); /* <-- replace with your image file */
+  background-image: url("background.jpg"); /* <-- your image name */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 100vh;
 }
 
-/* HERO WRAPPER */
+/* HERO SECTION */
 .hero {
-  width: 100%;
+  min-height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
   padding: 20px;
 }
@@ -51,10 +49,8 @@ body {
 /* TITLE */
 .hero-overlay h1 {
   font-size: 3rem;
-  font-weight: 700;
   color: #ff2d2d;
   margin-bottom: 20px;
-  letter-spacing: -1px;
 }
 
 /* TAGLINE */
@@ -65,7 +61,7 @@ body {
   line-height: 1.6;
 }
 
-/* REMOVE LINK UNDERLINES */
+/* REMOVE LINK UNDERLINE */
 a {
   text-decoration: none;
 }
@@ -78,52 +74,40 @@ a {
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
-/* PRIMARY BUTTON */
+/* PRIMARY */
 .btn-primary {
   background: #ff2d2d;
   color: white;
-  box-shadow: 0 10px 25px rgba(255, 45, 45, 0.4);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(255, 45, 45, 0.6);
 }
 
-/* OUTLINE BUTTON */
+/* OUTLINE */
 .btn-outline {
   border: 2px solid #ff2d2d;
   color: #ff2d2d;
-  background: transparent;
 }
 
 .btn-outline:hover {
   background: #ff2d2d;
   color: white;
-  transform: translateY(-3px);
 }
 
-/* ============================= */
-/* MOBILE OPTIMIZATION */
-/* ============================= */
-
+/* MOBILE FIX */
 @media (max-width: 768px) {
 
-  body {
+  .hero {
     align-items: flex-start;
     padding-top: 80px;
-
-    /* Better mobile framing */
-    background-position: center top;
-    background-size: cover;
   }
 
   .hero-overlay {
     padding: 40px 25px;
-    border-radius: 20px;
   }
 
   .hero-overlay h1 {
@@ -137,5 +121,9 @@ a {
   .btn {
     width: 100%;
     margin: 10px 0;
+  }
+
+  body {
+    background-position: center top;
   }
 }
