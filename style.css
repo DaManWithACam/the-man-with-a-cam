@@ -1,5 +1,5 @@
 /* ============================= */
-/* Liminal Lenz - Cinematic CSS  */
+/* Liminal Lenz - Clean CSS      */
 /* ============================= */
 
 /* RESET */
@@ -12,35 +12,40 @@
 /* BODY + BACKGROUND */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: url("background.jpg") no-repeat center center fixed;
-  background-size: cover;
+  color: white;
   min-height: 100vh;
+
+  background-image: url("background.jpg"); /* <-- replace with your image file */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 
-/* HERO CONTAINER */
+/* HERO WRAPPER */
 .hero {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 20px;
 }
 
-/* GLASS OVERLAY CARD */
+/* GLASS CARD */
 .hero-overlay {
   background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
   border-radius: 24px;
   padding: 60px 40px;
   max-width: 700px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 /* TITLE */
@@ -60,6 +65,11 @@ body {
   line-height: 1.6;
 }
 
+/* REMOVE LINK UNDERLINES */
+a {
+  text-decoration: none;
+}
+
 /* BUTTON BASE */
 .btn {
   display: inline-block;
@@ -68,7 +78,6 @@ body {
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
-  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -106,6 +115,10 @@ body {
   body {
     align-items: flex-start;
     padding-top: 80px;
+
+    /* Better mobile framing */
+    background-position: center top;
+    background-size: cover;
   }
 
   .hero-overlay {
