@@ -171,3 +171,16 @@ body {
   animation: none !important;
   transition: none !important;
 }
+/* Mobile image fix */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mobile grid layout */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
